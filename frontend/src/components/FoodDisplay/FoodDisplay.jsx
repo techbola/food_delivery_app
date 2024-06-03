@@ -7,7 +7,6 @@ const FoodDisplay = ({ category }) => {
   const { food_list } = React.useContext(StoreContext);
 
   const filteredFoodList = useMemo(() => {
-    console.log("func called");
     if (!category || category === "All") return food_list;
     return food_list.filter((item) => item.category === category);
   }, [category]);
